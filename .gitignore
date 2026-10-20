@@ -1,0 +1,33 @@
+# Environment files (Requirement: DB credentials must not be committed)
+.env
+.env.backup
+.env.production
+.env.local
+
+# Dependency directories
+backend/vendor/
+frontend/node_modules/
+
+# Build artifacts
+frontend/dist/
+
+# SQLite databases
+backend/database/*.sqlite
+backend/database/*.sqlite-journal
+
+# Logs and cache
+*.log
+.phpunit.result.cache
+backend/storage/*.key
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+!backend/storage/framework/cache/.gitignore
+!backend/storage/framework/sessions/.gitignore
+!backend/storage/framework/views/.gitignore
+
+# IDE / OS specific
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,72 @@
+services:
+  # 1. Database Service (MySQL 8.0)
+  database:
+    image: mysql:8.0
+    container_name: uts_database
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-uts_kepl}
+      MYSQL_USER: ${DB_USERNAME:-kepl_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-kepl_password123}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_secret}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-root_secret}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - uts_network
+
+  # 2. Backend Service (Laravel powered by FrankenPHP)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: uts_backend
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      APP_NAME: ${APP_NAME:-UTS_KEPL_API}
+      APP_ENV: ${APP_ENV:-production}
+      APP_KEY: ${APP_KEY:-base64:7K58w4WnO7H7+f+Q3VlQ7gA6zF+9O8J9wWzJ/L9+XQ=}
+      APP_DEBUG: ${APP_DEBUG:-false}
+      APP_URL: ${APP_URL:-http://localhost:8000}
+      DB_CONNECTION: mysql
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE:-uts_kepl}
+      DB_USERNAME: ${DB_USERNAME:-kepl_user}
+      DB_PASSWORD: ${DB_PASSWORD:-kepl_password123}
+    ports:
+      - "8000:8000"
+    networks:
+      - uts_network
+
+  # 3. Frontend Service (Vue.js served by Nginx with reverse proxy to backend)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: uts_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    networks:
+      - uts_network
+
+volumes:
+  # Named volume for database persistence across docker compose down & up
+  db_data:
+    driver: local
+
+networks:
+  uts_network:
+    driver: bridge
