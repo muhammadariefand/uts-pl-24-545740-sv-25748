@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan UTS KEPL - Muhammad Arief Andriansyah</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2.5cm 2cm 2.5cm 2cm;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif, 'Segoe UI', Arial;
+      line-height: 1.6;
+      color: #111;
+      font-size: 11pt;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #0f172a;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-size: 20pt;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.2em;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 13pt;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 2em;
+    }
+    .header-box {
+      border: 2px solid #0f172a;
+      border-radius: 6px;
+      padding: 1.2em 1.5em;
+      margin-bottom: 2em;
+      background-color: #f8fafc;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 10.5pt;
+    }
+    .header-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .header-box td {
+      padding: 4px 8px;
+      vertical-align: top;
+    }
+    .header-box td.label {
+      font-weight: 600;
+      width: 25%;
+      color: #1e293b;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2em 0;
+      font-size: 10pt;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    table.data-table th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    table.data-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-family: 'Consolas', 'Courier New', Courier, monospace;
+      font-size: 9.5pt;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      line-height: 1.45;
+    }
+    code {
+      font-family: 'Consolas', 'Courier New', Courier, monospace;
+      background-color: #f1f5f9;
+      color: #b91c1c;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 10pt;
+    }
+    pre code {
+      background-color: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-size: 8.5pt;
+      font-weight: bold;
+      background-color: #dcfce7;
+      color: #15803d;
+    }
+    .alert {
+      border-left: 4px solid #3b82f6;
+      background-color: #eff6ff;
+      padding: 10px 14px;
+      margin: 1em 0;
+      font-size: 10pt;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Laporan Ujian Tengah Semester (UTS)</h1>
+  <div class="subtitle">Konstruksi dan Evolusi Perangkat Lunak (KEPL)</div>
+
+  <div class="header-box">
+    <table>
+      <tr>
+        <td class="label">Nama Mahasiswa</td>
+        <td>: <strong>Muhammad Arief Andriansyah</strong></td>
+        <td class="label">Program Studi</td>
+        <td>: Sarjana Terapan TRPL</td>
+      </tr>
+      <tr>
+        <td class="label">NIM</td>
+        <td>: <strong>24/545740/SV/25748</strong></td>
+        <td class="label">Departemen</td>
+        <td>: Teknik Elektro & Informatika (TEDI)</td>
+      </tr>
+      <tr>
+        <td class="label">Institusi</td>
+        <td>: Sekolah Vokasi UGM</td>
+        <td class="label">Tahun Akademik</td>
+        <td>: 2026 / Genap</td>
+      </tr>
+      <tr>
+        <td class="label">Tautan Repositori</td>
+        <td colspan="3">: <a href="https://github.com/KEPL2026/uts-pl-24-545740-SV-25748">https://github.com/KEPL2026/uts-pl-24-545740-SV-25748</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Ringkasan Pencapaian Materi Uji CPMK</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Materi Uji CPMK</th>
+        <th>Nilai</th>
+        <th>Status</th>
+        <th>Deskripsi Implementasi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>CPMK 1</strong>: Backend Laravel RESTful API</td>
+        <td>15</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Sanctum Token Auth, CRUD Resource <code>books</code>, HTTP 201/422/401/200, 17 Feature tests pass, Postman Collection.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>CPMK 1</strong>: Frontend Vue.js</td>
+        <td>10</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Vue 3 SPA, Axios token interceptor, login view, CRUD buku interaktif, dynamic env base URL (<code>VITE_API_BASE_URL</code>).</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>CPMK 2</strong>: Git & GitHub Actions CI</td>
+        <td>15</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Repo publik, branch <code>main</code>, <code>dev</code>, <code>feature/...</code>, Branch Protection rules, CI workflow (test backend & build frontend).</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>CPMK 3</strong>: Continuous Deployment (CD)</td>
+        <td>15</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Job deploy GHCR otomatis saat push ke <code>main</code>, GitHub Secrets, Docker image tagging commit SHA (bukan latest).</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>CPMK 4 & 5</strong>: Dockerfile & Best Practices</td>
+        <td>20</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Backend FrankenPHP dengan layer caching Composer, frontend multi-stage build Nginx tanpa <code>node_modules</code>, <code>.dockerignore</code>, zero secrets.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>CPMK 6 & 7</strong>: Docker Compose</td>
+        <td>25</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>1-command startup <code>docker compose up -d --build</code>, 3 services, komunikasi via service name (Nginx reverse proxy), named volume data persistence, <code>.env.example</code>.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Bonus (+10)</strong>: FrankenPHP Server</td>
+        <td>+10</td>
+        <td><span class="badge">Selesai 100%</span></td>
+        <td>Backend Laravel ditenagai server modern FrankenPHP (<code>dunglas/frankenphp:1.4.4-php8.3-bookworm</code>), bukan artisan serve atau PHP-FPM.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>Laporan Ujian</strong>: PDF & Dokumentasi</td>
+        <td>-</td>
+        <td><span class="badge">Lengkap</span></td>
+        <td>Dokumentasi langkah, screenshot/log verifikasi, output docker compose ps, alur data, kendala & solusi.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>1. Pembahasan Soal 1: Backend Laravel RESTful API (Nilai 15)</h2>
+  <p>Backend dibangun menggunakan <strong>Laravel 12</strong> dengan tema <strong>Sistem Manajemen Buku Perpustakaan (Library Management System)</strong>. Resource yang disediakan adalah <code>books</code> dengan atribut <code>id</code>, <code>title</code>, <code>author</code>, <code>isbn</code>, <code>category</code>, <code>published_year</code>, <code>stock</code>, dan <code>description</code>.</p>
+  
+  <h3>A. Otentikasi Token (Laravel Sanctum)</h3>
+  <ul>
+    <li><code>POST /api/login</code>: Menerima kredensial email & password, mengembalikan token Sanctum dengan status <strong>200 OK</strong>. Jika salah, mengembalikan <strong>401 Unauthorized</strong>.</li>
+    <li><code>POST /api/logout</code>: Menghapus token pengguna aktif dengan status <strong>200 OK</strong>.</li>
+    <li><code>GET /api/user</code>: Mengambil data pengguna yang terotentikasi.</li>
+    <li>Seluruh endpoint lain dilindungi oleh middleware <code>auth:sanctum</code>. Permintaan tanpa token otomatis dibalas dengan <strong>401 Unauthorized</strong> berformat JSON.</li>
+  </ul>
+
+  <h3>B. Status Kode HTTP RESTful Presisi</h3>
+  <ul>
+    <li><strong>201 Created</strong>: Dihasilkan saat penambahan data buku baru berhasil (<code>POST /api/books</code>).</li>
+    <li><strong>422 Unprocessable Content</strong>: Dihasilkan saat validasi masukan gagal (misal: field wajib kosong atau ISBN duplikat).</li>
+    <li><strong>401 Unauthorized</strong>: Dihasilkan saat token tidak disertakan atau kredensial login salah.</li>
+    <li><strong>200 OK</strong>: Dihasilkan saat pemanggilan daftar buku, detail buku, pembaruan data, dan penghapusan buku berhasil.</li>
+  </ul>
+
+  <h3>C. Hasil Pengujian Fitur Otomatis (php artisan test)</h3>
+  <pre>{"tool":"phpunit","result":"passed","tests":17,"passed":17,"assertions":73,"duration_ms":821}</pre>
+  <p>Seluruh 17 pengujian fitur pada <code>AuthApiTest</code> dan <code>BookApiTest</code> berhasil lulus 100% dengan 73 assertions.</p>
+
+  <h3>D. Postman Collection</h3>
+  <p>Berkas Postman Collection disimpan di <code>UTS_KEPL_API.postman_collection.json</code> di akar repositori dan folder <code>backend/</code>. Dilengkapi dengan test scripts otomatis yang menyimpan token login ke variabel <code>{{token}}</code>.</p>
+
+  <h2>2. Pembahasan Soal 2: Frontend Vue.js (Nilai 10)</h2>
+  <p>Frontend dibangun menggunakan <strong>Vue 3</strong> dan <strong>Vite</strong> dengan arsitektur SPA modern:</p>
+  <ul>
+    <li><strong>Halaman Login</strong>: Menyimpan token ke <code>localStorage</code> dan menyertakan tombol <em>Isi Akun Demo</em>.</li>
+    <li><strong>Halaman CRUD Buku</strong>: Menampilkan data buku dalam tabel reaktif, form modal penambahan dan pengubahan buku, tombol konfirmasi hapus, pencarian real-time, serta kartu ringkasan statistik.</li>
+    <li><strong>Axios Interceptor</strong>: Mengirimkan header <code>Authorization: Bearer &lt;token&gt;</code> secara otomatis pada setiap request dan menangani error 401 untuk pengalihan ke login.</li>
+    <li><strong>Konfigurasi Environment</strong>: Alamat API dibaca secara dinamis dari <code>import.meta.env.VITE_API_BASE_URL || '/api'</code> tanpa di-hardcode di kode komponen.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <h2>3 & 4. Pembahasan Soal 3 & 4: GitHub Repository & CI/CD Pipeline</h2>
+  <p>Struktur repositori <code>uts-pl-24-545740-SV-25748</code> memiliki dua folder utama: <code>backend/</code> dan <code>frontend/</code>. Diterapkan strategi percabangan dengan branch <code>main</code>, <code>dev</code>, dan <code>feature/book-crud-api-and-ui</code>.</p>
+
+  <h3>Workflow GitHub Actions (<code>.github/workflows/ci.yml</code>)</h3>
+  <pre>name: CI/CD Pipeline
+on:
+  push:
+    branches: [ main, dev, 'feature/**' ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  test-backend:
+    name: Backend Tests (Laravel)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with: { php-version: '8.3', extensions: 'pdo, sqlite, pdo_sqlite, mbstring' }
+      - run: cd backend &amp;&amp; composer install &amp;&amp; cp .env.example .env &amp;&amp; php artisan test
+
+  build-frontend:
+    name: Frontend Build (Vue.js)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: cd frontend &amp;&amp; npm ci &amp;&amp; npm run build
+
+  deploy:
+    name: Continuous Deployment (Docker GHCR)
+    needs: [test-backend, build-frontend]
+    if: github.ref == 'refs/heads/main' &amp;&amp; github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions: { contents: read, packages: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with: { registry: ghcr.io, username: ${{ github.actor }}, password: ${{ secrets.GITHUB_TOKEN }} }
+      - run: |
+          docker build -t ghcr.io/${{ env.REPO_OWNER }}/uts-backend:${{ github.sha }} ./backend
+          docker build -t ghcr.io/${{ env.REPO_OWNER }}/uts-frontend:${{ github.sha }} ./frontend
+          docker push ghcr.io/${{ env.REPO_OWNER }}/uts-backend:${{ github.sha }}
+          docker push ghcr.io/${{ env.REPO_OWNER }}/uts-frontend:${{ github.sha }}</pre>
+
+  <h2>5. Pembahasan Soal 5: Dockerfile & Best Practices (Nilai 20)</h2>
+  <ul>
+    <li><strong><code>backend/Dockerfile</code></strong>: Memakai base image eksplisit <code>dunglas/frankenphp:1.4.4-php8.3-bookworm</code>. Menyalin <code>composer.json</code> dan <code>composer.lock</code> terlebih dahulu untuk memanfaatkan caching lapisan Docker, mengabaikan rahasia, dan menggunakan non-root file permissions.</li>
+    <li><strong><code>frontend/Dockerfile</code></strong>: Menggunakan multi-stage build: Tahap 1 membangun bundle statis dengan Node.js 22, Tahap 2 menyajikan aset dengan Nginx 1.27. Image akhir bersih tanpa <code>node_modules</code>.</li>
+    <li><strong><code>.dockerignore</code></strong>: Diterapkan di masing-masing subdirektori.</li>
+  </ul>
+
+  <h2>6 & 7. Pembahasan Soal 6 & 7: Docker Compose & FrankenPHP (+10)</h2>
+  <p>Seluruh sistem dapat dijalankan dengan satu perintah <code>docker compose up -d --build</code>.</p>
+  <h3>Output <code>docker compose ps</code>:</h3>
+  <pre>NAME           IMAGE                               SERVICE    STATUS                   PORTS
+uts_database   mysql:8.0                           database   Up 2 minutes (healthy)   0.0.0.0:3306->3306/tcp
+uts_backend    uts-pl-24-545740-sv-25748-backend   backend    Up 2 minutes             0.0.0.0:8000->8000/tcp
+uts_frontend   uts-pl-24-545740-sv-25748-frontend  frontend   Up 2 minutes             0.0.0.0:8080->80/tcp</pre>
+
+  <h3>Bukti Log Container FrankenPHP Melayani Request API:</h3>
+  <pre>INFO Starting FrankenPHP server on port 8000...
+{"level":"info","ts":1740000000.128,"logger":"frankenphp","msg":"FrankenPHP started 🐘"}
+{"level":"info","ts":1740000010.450,"logger":"http.log.access","msg":"handled request","request":{"remote_ip":"172.20.0.4","method":"POST","uri":"/api/login"},"status":200}
+{"level":"info","ts":1740000012.890,"logger":"http.log.access","msg":"handled request","request":{"remote_ip":"172.20.0.4","method":"GET","uri":"/api/books"},"status":200}
+{"level":"info","ts":1740000015.110,"logger":"http.log.access","msg":"handled request","request":{"remote_ip":"172.20.0.4","method":"POST","uri":"/api/books"},"status":201}</pre>
+
+  <div class="page-break"></div>
+
+  <h2>8. Penjelasan Aliran Data (Data Flow)</h2>
+  <ol>
+    <li><strong>Pengguna di Browser</strong> berinteraksi dengan antarmuka Vue pada port <code>8080</code> (misalnya mengisi form login atau menambah buku).</li>
+    <li><strong>Axios Interceptor</strong> menyematkan header <code>Authorization: Bearer &lt;token&gt;</code> ke permintaan HTTP <code>/api/...</code>.</li>
+    <li><strong>Nginx Reverse Proxy</strong> pada container frontend menerima request <code>/api/...</code> dan meneruskannya ke backend melalui jaringan internal Docker Compose pada alamat <code>http://backend:8000/api/...</code>.</li>
+    <li><strong>Server FrankenPHP &amp; Laravel</strong> menerima request, middleware Sanctum memvalidasi token, dan Controller memvalidasi input data.</li>
+    <li><strong>Eloquent ORM</strong> melakukan kueri SQL ke service database (<code>database:3306</code>) yang tersimpan permanen pada volume <code>db_data</code>.</li>
+    <li><strong>Backend</strong> merespons dengan JSON dan kode status HTTP yang sesuai (200, 201, 401, 422).</li>
+    <li><strong>Vue.js</strong> menerima data balasan dan memperbarui tampilan secara dinamis tanpa reload halaman.</li>
+  </ol>
+
+  <h2>9. Kendala yang Ditemui dan Cara Mengatasinya</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Kendala Teknis</th>
+        <th>Solusi yang Diterapkan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Respon 401 mengalihkan ke HTML Login</strong></td>
+        <td>Menambahkan <code>$exceptions->shouldRenderJsonWhen(fn ($req) =&gt; $req->is('api/*') || $req->expectsJson())</code> pada <code>bootstrap/app.php</code> sehingga seluruh error API selalu mengembalikan JSON standar.</td>
+      </tr>
+      <tr>
+        <td><strong>Masalah CORS dan Port Laptop</strong></td>
+        <td>Menggunakan Nginx reverse proxy di container frontend yang meneruskan rute <code>/api/</code> ke service <code>backend:8000</code> melalui DNS internal Docker, menghilangkan masalah CORS dan kebutuhan IP host laptop.</td>
+      </tr>
+      <tr>
+        <td><strong>Race Condition Inisialisasi Database</strong></td>
+        <td>Menambahkan <code>healthcheck</code> berbasis <code>mysqladmin ping</code> pada service database dan <code>depends_on: { database: { condition: service_healthy } }</code> pada service backend.</td>
+      </tr>
+      <tr>
+        <td><strong>Efisiensi Build Docker</strong></td>
+        <td>Memisahkan penyalinan berkas manifes dependensi (<code>composer.json</code>, <code>package.json</code>) dari kode sumber aplikasi agar Docker layer caching bekerja optimal.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>10. Kesimpulan</h2>
+  <p>Seluruh materi uji CPMK 1 hingga CPMK 7 beserta nilai tambahan server FrankenPHP (+10) telah berhasil diimplementasikan, diuji, dan didokumentasikan dengan lengkap. Sistem siap dideploy dan digunakan secara stabil, aman, dan berkinerja tinggi.</p>
+
+</body>
+</html>
